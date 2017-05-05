@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PreDbActiveAndroid</string>
+    <string name="action_search">Search</string>
+    <string name="today_s_picks">TEST_label</string>
+</resources>
