@@ -128,4 +128,18 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         Adpterff.setFilter(newlist);
         return  false ;
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+ 
 }
