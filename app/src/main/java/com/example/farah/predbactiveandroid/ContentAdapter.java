@@ -1,6 +1,7 @@
 package com.example.farah.predbactiveandroid;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
@@ -47,11 +48,20 @@ public class ContentAdapter  extends RecyclerView.Adapter<ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         Itemd vocdata = dataitraw.get(position);
         byte[] outImage=dataitraw.get(position).imgvoc;
-      ByteArrayInputStream imageStream = new ByteArrayInputStream(outImage);
-      Bitmap theImage = BitmapFactory.decodeStream(imageStream);
+       // Resources resources = context.getResources();
+        if (outImage !=null) {
+            ByteArrayInputStream imageStream = new ByteArrayInputStream(outImage);
+            Bitmap theImage = BitmapFactory.decodeStream(imageStream);
 
-      holder.picture.setImageBitmap(theImage);
+           holder.picture.setImageBitmap(theImage);
+        }
+        else
+            {
+            //   holder.picture.setImageBitmap();
+
+        }
         holder.name.setText(dataitraw.get(position).namef);
+
     }
 
     @Override

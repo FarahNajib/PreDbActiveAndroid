@@ -16,8 +16,13 @@ public class Itemd extends Model implements Serializable {
 
     @Column(name = "id")
     public String idn;
+
     @Column(name = "namef")
     public String namef;
+
+   @Column(name = "MeanVoc")
+    public String meanvoc;
+
     @Column(name = "imgvoc")
     public byte[] imgvoc;
 
